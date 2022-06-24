@@ -29,15 +29,16 @@ function createSquares() {
     square.classList.add('square-grid');
     square.addEventListener('click', function () {
         // se c'è l'array di bombe
-        parseInt(square.innerHTML)
-        if (arrayBomb) {
+        const squareNumber = parseInt(square.innerHTML);
+        if (arrayBomb.includes(squareNumber)) {
            
             square.classList.toggle('bomb');
+            alert('BOOOMBA hai perso');
            
             // altrimenti si colora di azzurro
         } else {
             square.classList.toggle('active');
-            alert('hai vinto');
+            
         };
 
     });
