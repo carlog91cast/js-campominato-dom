@@ -7,7 +7,7 @@ const gridContainer = document.getElementById('mine-camp');
 playBtn.addEventListener('click', function () {
     gridContainer.innerHTML = "";
     for (let i = 0; i < 100; i++) {
-        
+
         // inserisco la funzione che crea i quadrati
         inSquare = createSquares();
 
@@ -28,11 +28,18 @@ function createSquares() {
     const square = document.createElement('div')
     square.classList.add('square-grid');
     square.addEventListener('click', function () {
-        if (arrayBomb) {
-            square.classList.toggle('bomb');
+        // se c'è l'array di bombe
+        if (arrayBomb[index]) {
+            for (let index = 0; index < arrayBomb.length; index++) {
+                // le caselle con il numero nell'array di bombe corrispondente di colora di rosso
+                square.classList.toggle('bomb');
+            };
+            alert('hai perso');
+            // altrimenti si colora di azzurro
         } else {
-            square.classList('active');
-        }
+            square.classList.toggle('active');
+            alert('hai vinto');
+        };
 
     });
 
@@ -50,17 +57,22 @@ console.log(arrayBomb);
 // genero un numero randomico da 1 a 16 da inserire in una funzione che richiamero poi nell'addevenlistener di cui sopra
 
 function getRandomBombNumber(minNum, maxNum) {
+    // inizializzo l'array bombe
     const bombList = [];
+    // inizializzo il numero randomico
     let randomNumber;
+    // ciclo while: per 16 volte
 
     while (bombList.length < 16) {
-
+    // mi generi un numero randomico
         randomNumber = Math.floor(Math.random() * (maxNum - minNum) + minNum);
 
-
+        // se il numero randomico è incluso nell'array di bombe ed è diverso l'uno dall'altro
         if (bombList.includes(randomNumber) !== true) {
+            // me lo inserisci nell'array di bombe(cortesemente)
             bombList.push(randomNumber);
         };
     };
+    // cosi mi creo l'array di bombe da inserire nel grid
     return bombList;
 }
