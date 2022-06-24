@@ -34,12 +34,15 @@ body {
 
 .square-grid {
 
-    width: calc(100% / 10);
-    height: calc(100% / 10);
+    width: calc(100% / 20);
+    height: calc(100% / 20);
     border: 1px solid black;
     background-color: plum;
 }
 
 .active {
     background-color: aqua;
+}
+.bomb{
+    background-color: red;
 }
