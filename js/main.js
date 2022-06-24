@@ -34,3 +34,11 @@ function createSquares() {
     return square;
 
 };
+
+// Il computer deve generare 16 numeri casuali nello stesso range della difficoltà prescelta: le bombe
+
+// creo un array vuoto che deve contenere le bombe
+
+const arrayBomb = [];
+
+// genero un numero randomico da 1 a 16
