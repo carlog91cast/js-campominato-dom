@@ -44,19 +44,17 @@ const arrayBomb = [getRandomBombNumber(1, 100)];
 // genero un numero randomico da 1 a 16 da inserire in una funzione che richiamero poi nell'addevenlistener di cui sopra
 
 function getRandomBombNumber(blacklist, minNum, maxNum) {
-    index = 0;
-    isBombNum = false
-    while (index < 16 && isBombNum === false) {
-        let randomNumber;
+    let index = 0;
+    let randomNumber;
+    let isBombNum = false;
+    while (isBombNum === false) {
+
         randomNumber = Math.floor(Math.random() * (maxNum - minNum) + minNum);
         console.log(randomNumber);
         i++;
         if (blacklist.includes(randomNumber) === false) {
             isBombNum = true;
-        }
-    }
-
-
-
-
+        };
+    };
+    return isBombNum;
 }
