@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #011627;
+}
+
+
+.ms_logo {
+    width: 50px;
+    height: 50px;
+}
+
+.ms_btn {
+    padding: 0 30px;
+    margin-left: 50%;
+}
+
+/* grid */
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    border: 1px solid black;
+    margin: 5% auto;
+    width: 1000px;
+    height: 1000px;
+}
+
+.square-grid {
+
+    width: calc(100% / 10);
+    height: calc(100% / 10);
+    border: 1px solid black;
+    background-color: plum;
+}
+
+.active {
+    background-color: aqua;
+}
