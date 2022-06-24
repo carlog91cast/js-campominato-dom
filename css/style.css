@@ -34,8 +34,8 @@ body {
 
 .square-grid {
 
-    width: calc(100% / 20);
-    height: calc(100% / 20);
+    width: calc(100% / 10);
+    height: calc(100% / 10);
     border: 1px solid black;
     background-color: plum;
 }

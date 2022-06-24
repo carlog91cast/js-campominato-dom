@@ -6,11 +6,10 @@ const gridContainer = document.getElementById('mine-camp');
 // creo i songoli quadrati
 playBtn.addEventListener('click', function () {
     gridContainer.innerHTML = "";
-    for (let i = 0; i < 400; i++) {
+    for (let i = 0; i < 100; i++) {
         
         // inserisco la funzione che crea i quadrati
         inSquare = createSquares();
-        // inserisco la funzione nel button
 
         // inserisco i quadrati nell'html con append
         inSquare.innerHTML = i;
@@ -32,7 +31,7 @@ function createSquares() {
         if (arrayBomb) {
             square.classList.toggle('bomb');
         } else {
-            square.classList.toggle('active');
+            square.classList('active');
         }
 
     });
