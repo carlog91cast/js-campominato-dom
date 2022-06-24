@@ -41,4 +41,12 @@ function createSquares() {
 
 const arrayBomb = [];
 
-// genero un numero randomico da 1 a 16
+// genero un numero randomico da 1 a 16 da inserire in una funzione che richiamero poi nell'addevenlistener di cui sopra
+
+function getRandomBombNumber(bombList, minNum, maxNum) {
+    let RandomNumber;
+    RandomNumber = Math.floor(Math.random() * ((maxNum + 1) - minNum) + minNum);
+    console.log(RandomNumber);
+
+    
+}
