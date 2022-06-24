@@ -4,7 +4,7 @@ const gridContainer = document.getElementById('mine-camp');
 // creo i songoli quadrati
 playBtn.addEventListener('click', function () {
     gridContainer.innerHTML = "";
-    for (let i = 1; i <= 100; i++) {
+    for (let i = 0; i < 100; i++) {
 
         // inserisco la funzione che crea i quadrati
         inSquare = createSquares();
@@ -39,14 +39,24 @@ function createSquares() {
 
 // creo un array vuoto che deve contenere le bombe
 
-const arrayBomb = [];
+const arrayBomb = [getRandomBombNumber(1, 100)];
 
 // genero un numero randomico da 1 a 16 da inserire in una funzione che richiamero poi nell'addevenlistener di cui sopra
 
-function getRandomBombNumber(bombList, minNum, maxNum) {
-    let RandomNumber;
-    RandomNumber = Math.floor(Math.random() * ((maxNum + 1) - minNum) + minNum);
-    console.log(RandomNumber);
+function getRandomBombNumber(blacklist, minNum, maxNum) {
+    index = 0;
+    isBombNum = false
+    while (index < 16 && isBombNum === false) {
+        let randomNumber;
+        randomNumber = Math.floor(Math.random() * (maxNum - minNum) + minNum);
+        console.log(randomNumber);
+        i++;
+        if (blacklist.includes(randomNumber) === false) {
+            isBombNum = true;
+        }
+    }
 
-    
+
+
+
 }
