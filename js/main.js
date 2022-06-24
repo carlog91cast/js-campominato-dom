@@ -29,11 +29,9 @@ function createSquares() {
     square.classList.add('square-grid');
     square.addEventListener('click', function () {
         // se c'è l'array di bombe
+        parseInt(square.innerHTML)
         if (arrayBomb) {
-            // for (let index = 0; index < arrayBomb.length; index++) {
-            //     // le caselle con il numero nell'array di bombe corrispondente di colora di rosso
-                
-            // };
+           
             square.classList.toggle('bomb');
            
             // altrimenti si colora di azzurro
